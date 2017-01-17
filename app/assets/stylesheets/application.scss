@@ -23,29 +23,14 @@
     color: #125688;
   }
   border-bottom: thin dashed #80ccff;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .navbar-container {
   width: 70%;
   margin: 0 auto;
 }
-
-/* ## Wrapper and styling for the new and edit views ## */
-
-.form-wrapper {
-  width: 60%;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 40px;
-  border: 1px solid #eeefef;
-  border-radius: 3px;
-}
-
-.edit-links {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
 
 body {
   background:#2EB5E5 ;
