@@ -12,5 +12,11 @@ RSpec.describe Tweet, type: :model do
 
   describe '#tweet_count' do
     it { is_expected.to respond_to(:tweet_count) }
+
+    it "should return an integer" do
+      allow(client).to receive(:filter)
+      expect(tweet.tweet_count("test")).to be_a_kind_of(Integer)
+    end
+
   end
 end
