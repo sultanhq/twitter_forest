@@ -11,7 +11,7 @@ gem 'rails', '~> 5.0.1'
 gem 'haml'
 # boostrap gem
 gem 'bootstrap-sass'
-#SQL
+# Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -44,6 +44,8 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'pry-rails', :group => :development
 end
 
 group :development do
@@ -57,7 +59,6 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'rspec-rails'
   gem 'capybara-extensions'
   gem 'database_cleaner'
 end
