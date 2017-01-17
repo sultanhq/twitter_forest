@@ -8,6 +8,16 @@ feature 'forest' do
     end
   end
 
+  context 'viewing tweet count' do
+    scenario 'user can see the count of tweets' do
+      # @tweet = double("tweet", count: 17)
+      visit '/forest'
+      # require'pry';binding.pry
+      expect(page).to have_content('17 Tweets')
+    end
+  end
+
+
   xcontext 'customise forest' do
     scenario 'User can pick from a list the type of forest' do
       visit '/'
