@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Tweet, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '#tweet_count' do
+    it { is_expected.to respond_to(:tweet_count) }
+  end
 end
