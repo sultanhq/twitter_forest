@@ -17,7 +17,7 @@ class Tweet < ApplicationRecord
     tweets = []
     @client.filter(track: hashtag) do |tweet|
       tweets << tweet.text
-      puts "#{tweets}"
+      puts "#{tweets.count}"
     end
 
   end
