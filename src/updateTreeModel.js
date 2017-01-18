@@ -6,13 +6,13 @@
 
   UpdateTreeModel.prototype = {
     randomNumberGenerator: function() {
-      Math.floor((Math.random() * 100) + 1);
+      return Math.floor((Math.random() * 100) + 1);
     },
 
     updateCounter: function() {
       this.counter = this.randomNumberGenerator();
     },
-    
+
   };
 
   exports.UpdateTreeModel = UpdateTreeModel;
