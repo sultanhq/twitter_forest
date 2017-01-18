@@ -13,9 +13,14 @@
     .ray.ray9
     .ray.ray10
 
+:javascript
+  $(document).ready(function(){
+    setInterval(function() {
+    $.ajax("/forest/create_random_integer")
+    }, 2000);
+  });
 
-.forest
-  #tree
-    %h1#counter= @tweet.counter
-    #moving_bar_container
-      #moving_bar
+%center
+  %h1#counter= @tweet.counter
+  #moving_bar_container
+    #moving_bar

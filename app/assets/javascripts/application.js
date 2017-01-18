@@ -16,3 +16,9 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
+
+// $(document).ready(function(){
+//   setInterval(function() {
+//
+//   }, 5000);
+// });
