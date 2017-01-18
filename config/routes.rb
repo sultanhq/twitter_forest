@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :tweets
+  resources :forest, :tweets
+
+  root 'forest#index'
 end

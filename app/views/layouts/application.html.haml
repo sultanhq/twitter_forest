@@ -1,0 +1,44 @@
+!!!
+%html
+  %head
+    %title Twitter Forest
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %nav.navbar.navbar-default
+      .navbar-container
+        .navbar-header
+          %button.navbar-toggle.collapsed{"data-target" => "#bs-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
+            %span.sr-only Toggle Navigation
+            %span.icon-bar
+            %span.icon-bar
+          -# .navbar-brand= link_to image_tag("/assets/images/camera.png", size: "40x40"), photos_path
+          .navbar-brand= "Twitter Forest"
+        .collapse.navbar-collapse#bs-navbar-collapse-1
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              =link_to  "Customise Forest", "#myModal", "data-toggle" => "modal"
+              #myModal.modal.fade{:role => "dialog"}
+                .modal-dialog
+                  .modal-content
+                    .modal-header
+                      %button.close{"data-dismiss" => "modal", :type => "button"} &#215
+                      %h4.modal-title Forest Choices
+                    .modal-body
+                      #choice
+                        %label.choice Select from list
+                        %select.category_choice
+                          %option Flora
+                          %option Forna
+                          %option Trump
+                          %option Lettuce
+                    .modal-footer
+                      %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Generate Forest
+            %li
+              =link_to "Reset", '#'
+            %li
+              =link_to "Snapshot", '#'
+            %li
+              =link_to "Share", '#'
+    = yield
