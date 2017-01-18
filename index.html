@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,7 +17,7 @@
             <span class='icon-bar'></span>
             <span class='icon-bar'></span>
           </button>
-          <div class='navbar-brand'>Twitter Forest</div>
+          <div class='navbar-brand'>Twitter Forest <span id="forest-type"></span></div>
         </div>
         <div class='collapse navbar-collapse' id='bs-navbar-collapse-1'>
           <ul class='nav navbar-nav navbar-right'>
@@ -34,7 +33,7 @@
                     <div class='modal-body'>
                       <div id='choice'>
                         <label class='choice'>Select from list</label>
-                        <select class='category_choice'>
+                        <select class='category_choice' id="forest-selection">
                           <option>Flora</option>
                           <option>Forna</option>
                           <option>Trump</option>
@@ -43,7 +42,7 @@
                       </div>
                     </div>
                     <div class='modal-footer'>
-                      <button class='btn btn-default' data-dismiss='modal' type='submit'>Generate Forest</button>
+                      <button class='btn btn-default' data-dismiss='modal' id='generate-forest'>Generate Forest</button>
                     </div>
                   </div>
                 </div>
