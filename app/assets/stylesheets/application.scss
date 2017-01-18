@@ -23,6 +23,8 @@
     color: #125688;
   }
   border-bottom: thin dashed #80ccff;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .navbar-container {
@@ -30,117 +32,116 @@
   margin: 0 auto;
 }
 
-/* ## POST CUSTOMISATIONS ## */
-
-.posts-wrapper {
-  padding-top: 40px;
-  margin: 0 auto;
-  max-width: 642px;
-  width: 100%;
+body {
+  background:#2EB5E5 ;
 }
 
-.post {
-  background-color: #fff;
-  border-color: #edeeee;
-  border-style: solid;
-  border-radius: 3px;
-  border-width: 1px;
-  margin-bottom: 60px;
-  border: thin dashed #80ccff;
-  .post-head {
-    flex-direction: row;
-    height: 64px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 24px;
-    color: #125688;
-    font-size: 15px;
-    line-height: 18px;
-    .user-name, .time-ago {
-      display: inline;
-    }
-    .user-name {
-      font-weight: 500;
-    }
-    .time-ago {
-      color: #A5A7AA;
-      float: right;
-    }
-  }
-  .image {
-    border-bottom: 1px solid #eeefef;
-    border-top: 1px solid #eeefef;
-  }
+.sun {
+  position: absolute;
+	top:55px;
+	left:0;
+	right:0;
+	bottom:0;
+	width:70px;
+	height:70px;
+	border-radius:50%;
+	background:white;
+	opacity:0.9;
+	box-shadow: 0px 0px 40px 15px white;
 }
 
-.post-bottom {
-  .user-name, .comment-content {
-    display: inline;
-  }
-  .caption {
-    margin-bottom: 7px;
-  }
-  .user-name {
-    font-weight: 500;
-    margin-right: 0.3em;
-    color: #125688;
-    font-size: 15px;
-  }
-  .user-name, .caption-content {
-    display: inline;
-  }
-  #comment {
-    margin-top: 7px;
-    .user-name {
-      font-weight: 500;
-      margin-right: 0.3em;
-    }
-    .delete-comment {
-      float: right;
-      color: #515151;
-    }
-  }
-  margin-bottom: 7px;
-  padding-top: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 10px;
-  font-size: 15px;
-  line-height: 18px;
+.ray_box {
+  position: absolute;
+	top:0px;
+	left:0;
+	right:0;
+	bottom:0;
+  width:70px;
+  -webkit-animation: ray_anim 120s linear infinite;
+  animation: ray_anim 120s linear infinite;
+}
+.ray {
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+		background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+    margin-left:10px;
+    border-radius:80% 80% 0 0;
+    position:absolute;
+    opacity:0.1;
 }
 
-.comment_content {
-  font-size: 15px;
-  line-height: 18px;
-  border: medium none;
-  width: 100%;
-  color: #4B4F54;
+.ray1 {
+    height:170px;
+    width:30px;
+   -webkit-transform: rotate(180deg);
+    top:-175px;
+    left: 15px;
+}
+.ray2 {
+    height:100px;
+    width:8px;
+   -webkit-transform: rotate(220deg);
+    top:-90px;
+    left: 75px;
+}
+.ray3 {
+    height:170px;
+    width:50px;
+   -webkit-transform: rotate(250deg);
+    top:-80px;
+    left: 100px;
+}
+.ray4 {
+    height:120px;
+    width:14px;
+   -webkit-transform: rotate(305deg);
+    top:30px;
+    left: 100px;
+}
+.ray5 {
+    height:140px;
+    width:30px;
+   -webkit-transform: rotate(-15deg);
+    top:60px;
+    left: 40px;
+}
+.ray6 {
+    height:90px;
+    width:50px;
+   -webkit-transform: rotate(30deg);
+    top:60px;
+    left: -40px;
+}
+.ray7 {
+    height:180px;
+    width:10px;
+   -webkit-transform: rotate(70deg);
+    top:-35px;
+    left: -40px;
+}
+.ray8 {
+    height:120px;
+    width:30px;
+   -webkit-transform: rotate(100deg);
+    top:-45px;
+    left:-90px;
+}
+.ray9 {
+    height:80px;
+    width:10px;
+   -webkit-transform: rotate(120deg);
+    top:-65px;
+    left:-60px;
+}
+.ray10 {
+    height:190px;
+    width:23px;
+   -webkit-transform: rotate(150deg);
+    top:-185px;
+    left: -60px;
 }
 
-.comment-like-form {
-  padding-top: 24px;
-  margin-top: 13px;
-  margin-left: 24px;
-  margin-right: 24px;
-  min-height: 68px;
-  align-items: center;
-  border-top: 1px solid #EEEFEF;
-  flex-direction: row;
-  justify-content: center;
-}
 
-/* ## Wrapper and styling for the new and edit views ## */
-
-.form-wrapper {
-  width: 60%;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 40px;
-  border: 1px solid #eeefef;
-  border-radius: 3px;
-}
-
-.edit-links {
-  margin-top: 20px;
-  margin-bottom: 40px;
+@-webkit-keyframes ray_anim {
+		0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
 }
