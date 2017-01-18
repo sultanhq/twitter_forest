@@ -16,3 +16,11 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
+
+bgAudio = new Audio('media/bg_audio.mp3');
+bgAudio.addEventListener('ended', function() {
+  this.currentTime = 0;
+  this.play();
+}, false);
+bgAudio.volume = 0.25;
+bgAudio.play();
