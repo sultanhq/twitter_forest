@@ -16,3 +16,4 @@
 
 # Don't check in credentials
 config/env.yml
+.DS_Store
