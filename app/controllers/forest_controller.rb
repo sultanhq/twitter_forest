@@ -1,7 +1,9 @@
 class ForestController < ApplicationController
 
   def index
-    # @tweet.count
+    @tweet = Tweet.new
+    @tweet.index
+    @tweet.create_random_integer
   end
 
 end

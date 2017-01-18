@@ -16,15 +16,16 @@
 @import "bootstrap";
 
 #moving_bar_container {
-  height: 179px;
+  height: 80vh;
   width: 34px;
+  align: centre;
   position: absolute;
   bottom: 15px;
 }
 
 #moving_bar {
   height: 5%;
-  background-color: red;
+  background-color: #745347;
   width: 15px;
   bottom: 0;
   position: absolute;
