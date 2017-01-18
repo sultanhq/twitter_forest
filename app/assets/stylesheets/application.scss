@@ -15,6 +15,25 @@
 // @import "bootstrap-sprockets";
 @import "bootstrap";
 
+#moving_bar_container {
+  height: 179px;
+  width: 34px;
+  position: absolute;
+  bottom: 15px;
+}
+
+#moving_bar {
+  height: 5%;
+  background-color: red;
+  width: 15px;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+  margin-left: 9px;
+  z-index: 100;
+}
+
+
 
 .navbar-default {
   background-color: #fff;
