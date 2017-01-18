@@ -15,14 +15,14 @@
  */
 
 
- #thermostat-fill-container {
+ #moving_bar_container {
    height: 179px;
    width: 34px;
    position: absolute;
    bottom: 15px;
  }
 
- #thermostat-fill {
+ #moving_bar {
    height: 5%;
    background-color: red;
    width: 15px;
