@@ -10,15 +10,11 @@ describe('UpdateTreeView', function() {
     updateTreeView = new UpdateTreeView(updateTreeModel);
   });
 
-  it("should know of updateTreeModel", function() {
-    expect(updateTreeView.updateTreeModel).toEqual(updateTreeModel);
-  });
-
   // it("should update innerHTML", function() {
   //   spyOn(updateTreeModel, 'counter').and.returnValue(20);
   //   var dummyElement = document.createElement('div', "counter");
   //   var element = document.getElementById("counter");
-  //   updateTreeView.updateInnerHtml();
+  //   updateTreeView.updateCounterHtml();
   //   expect(element).toEqual(20);
   // });
 

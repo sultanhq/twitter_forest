@@ -1,13 +1,11 @@
 (function(exports) {
 
-  function UpdateTreeView(model) {
-    this.updateTreeModel = model;
-  };
+  function UpdateTreeView() {};
 
   UpdateTreeView.prototype = {
-    updateInnerHtml: function() {
+    updateCounterHtml: function(modelCounter) {
     element = document.getElementById('counter')
-    element.innerHTML = this.updateTreeModel.counter
+    element.innerHTML = modelCounter;
     }
   };
 
