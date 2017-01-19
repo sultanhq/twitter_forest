@@ -19,6 +19,7 @@
   bottom: 0;
   margin: 0;
   display: inline-block;
+  transition: height 2s;
 
 }
 
