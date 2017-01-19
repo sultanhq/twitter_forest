@@ -18,4 +18,3 @@ bgAudio.addEventListener('ended', function() {
 }, false);
 bgAudio.volume = 0.25;
 bgAudio.play();
-
