@@ -20,7 +20,22 @@
   margin: 0;
   display: inline-block;
   transition: height 2s;
+}
 
+/*#tree {
+  background-image: url("./images/t7.png") no-repeat;
+  height: 20px;
+  display: inline-block;
+
+}*/
+img {
+  height: 50vh;
+  bottom: 0;
+  margin: 0;
+  z-index: 100;
+  display: inline-block;
+  position: absolute;
+  transition: height 2s;
 }
 
 .navbar-default {
