@@ -9,19 +9,19 @@ window.onload = function() {
   controller.updatePage();
     var counter = document.getElementById("counter");
     if (counter.innerHTML < 15) {
-      document.getElementById("tree").innerHTML = "<img style='height: 5vh;' src='./assets/images/t1.png'></img>";
+      document.getElementById("tree").className = "tree-1";
     } else if (counter.innerHTML >= 15 && counter.innerHTML < 30) {
-      document.getElementById("tree").innerHTML = "<img style='height: 10vh;' src='./assets/images/t2.png'></img>";
+      document.getElementById("tree").className = "tree-2";
     } else if (counter.innerHTML >= 30 && counter.innerHTML < 45) {
-      document.getElementById("tree").innerHTML = "<img style='height: 18vh;' src='./assets/images/t3.png'></img>";
+      document.getElementById("tree").className = "tree-3";
     } else if (counter.innerHTML >= 45 && counter.innerHTML < 60) {
-      document.getElementById("tree").innerHTML = "<img style='height: 40vh;' src='./assets/images/t4.png'></img>";
+      document.getElementById("tree").className = "tree-4";
     } else if (counter.innerHTML >= 60 && counter.innerHTML < 75) {
-      document.getElementById("tree").innerHTML = "<img style='height: 60vh;' src='./assets/images/t5.png'></img>";
+      document.getElementById("tree").className = "tree-5";
     } else if (counter.innerHTML >= 75 && counter.innerHTML < 90) {
-      document.getElementById("tree").innerHTML = "<img style='height: 80vh;' src='./assets/images/t7.png'></img>";
+      document.getElementById("tree").className = "tree-6";
     } else {
-      document.getElementById("tree").innerHTML = "<img style='height: 90vh;' src='./assets/images/t7.png'></img>";
+      document.getElementById("tree").className = "tree-7";
     }
 
   }, 3000);

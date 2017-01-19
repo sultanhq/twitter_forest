@@ -23,17 +23,105 @@
 }
 
 #tree {
-  margin: auto;
+  bottom: 0px;
+  /*left: 40%;*/
+  /*max-height: 90%;*/
+  /*min-height: 50px;*/
+  /*clear:both;*/
+  position: absolute;
+  height:90vh;
+  width:100%;
 }
 
-#tree img {
+.tree-1 {
+  /*margin: auto;*/
+  height: 5vh;
+  background-image: url("./images/t1.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: 2s;
+  /*bottom: 0px;*/
+  width:100%;
+}
+
+.tree-2 {
+  /*margin: auto;*/
+  height: 10vh;
+  background-image: url("./images/t2.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: 2s;
+  position: absolute;
+  /*bottom: 0px;*/
+  /*width:100%;*/
+}
+
+.tree-3 {
+  /*margin: auto;*/
+  height: 18vh;
+  background-image: url("./images/t3.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: 2s;
+  position: absolute;
+  /*bottom: 0px;*/
+}
+
+.tree-4 {
+  /*margin: auto;*/
+  height: 30vh;
+  background-image: url("./images/t4.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: 2s;
+  position: absolute;
+  /*bottom: 0px;*/
+  /*width:100%;*/
+
+}
+
+.tree-5 {
+  /*margin: auto;*/
+  height: 60vh;
+  background-image: url("./images/t5.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: 2s;
+  position: absolute;
+  /*bottom: 0px;*/
+  /*width:100%;*/
+}
+
+.tree-6 {
+  /*margin: auto;*/
+  height: 80vh;
+  background-image: url("./images/t7.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: 2s;
+  position: absolute;
+  /*bottom: 0px;*/
+  /*width:100%;*/
+}
+
+.tree-7 {
+  /*margin: auto;*/
+  height: 90vh;
+  background-image: url("./images/t7.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: 2s;
+  position: absolute;
+  /*bottom: 0px;*/
+  /*width:100%;*/
+}
+
+/*img {
   position:fixed;
   bottom:0px;
   left:50%;
-  -webkit-transition: opacity 2s ease 0s;;
-  -moz-transition: opacity 2s ease 0s;;
-  transition: opacity 2s ease 0s !important;
-}
+  transition: 3s;
+}*/
 
 .center {
   margin-top: 50px;
