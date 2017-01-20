@@ -23,6 +23,7 @@
 }
 
 #tree {
+  z-index: -1;
   bottom: 0px;
   position: absolute;
   height:90vh;
@@ -124,6 +125,11 @@
 
 body {
   background:#2EB5E5;
+}
+
+.navbar-collapse.in {
+    background: #fff;
+    z-index: 1000;
 }
 
 .sun {
