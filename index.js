@@ -7,7 +7,10 @@ window.onload = function() {
   var controller = new Controller(updateTreeModel, updateTreeView);
   var msg = 0;
 
-
+  $("#Reset").click(function(){
+    console.log("reset");
+    sendReset();
+  });
 
   $("#generate-forest").click(function(){
     var selection = $('#forest-selection').find(":selected").text();

@@ -51,7 +51,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li id= "Reset">
             <a href="#">Reset</a>
           </li>
           <li>
@@ -95,6 +95,10 @@
 
   function requestCount(){
     ws.send("request");
+  }
+
+  function sendReset(){
+    ws.send("!reset");
   }
 
   ws.addEventListener("message", function(e) {

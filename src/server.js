@@ -2,7 +2,12 @@ var Twitter = require('twitter');
 var http = require('http');
 // var filter = '#nil';
 
-
+var client = new Twitter({
+  consumer_key: '1',
+  consumer_secret: '1',
+  access_token_key: '1',
+  access_token_secret: '1'
+});
 
 var tweetCounter = 0;
 
@@ -46,6 +51,10 @@ wsServer.on('request', function(r) {
 
     if (message.utf8Data.includes("#")) {
       setStream(message.utf8Data);
+    }
+    else if (message.utf8Data.includes("!reset"))
+    {
+      tweetCounter = 0;
     }
     else if (message.utf8Data.includes("request")) {
       for (var i in clients) {
