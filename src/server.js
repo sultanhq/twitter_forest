@@ -39,17 +39,41 @@ wsServer.on('request', function(r) {
 
 
   function setStream(filter) {
+    function tweet() {}
+
+    function error() {}
+
+    function track() {}
+
+
     console.log(filter);
     if (stream !== null) {
       stream.destroy();
+      stream.removeListener('data', tweet);
+      stream.removeListener('error', error);
+      stream.removeListener('statuses/filter', track);
     } else {
       stream = null;
-    };
-    tweetCounter = 0
+    }
+
+    tweetCounter = 0;
     stream = client.stream('statuses/filter', {
       track: filter
     });
+
+    stream.on('data', function(tweet) {
+      tweetCounter = tweetCounter + 1;
+      console.log(tweetCounter);
+      console.log(tweet.text);
+    });
+
+    stream.on('error', function(error) {
+      console.log(error);
+      stream.destroy();
+    });
   }
+
+
 
   connection.on('message', function(message) {
 
@@ -61,20 +85,11 @@ wsServer.on('request', function(r) {
       for (var i in clients) {
         clients[i].sendUTF(tweetCounter);
       }
-
-      stream.on('data', function(tweet) {
-        tweetCounter = tweetCounter + 1;
-        console.log(tweetCounter);
-        console.log(tweet.text);
-      });
-
-      stream.on('error', function(error) {
-        throw error;
-      });
     }
   });
 
   connection.on('close', function(reasonCode, description) {
+    stream.destroy();
     stream = null;
     delete clients[id];
     console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected.');

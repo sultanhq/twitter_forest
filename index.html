@@ -87,9 +87,10 @@
   <script>
   var ws = new WebSocket('ws://127.0.0.1:1234', 'echo-protocol');
   var hashTag = ""
+  function e() {}
 
   function sendHashTag(){
-    // console.log(document.getElementById("forest-type").innerHTML)
+    ws.removeEventListener('message', e);
     ws.send(hashTag);
   }
 
@@ -105,6 +106,7 @@
     console.log(e.data);
     msg = e.data;
   });
+
   </script>
 </body>
 </html>
