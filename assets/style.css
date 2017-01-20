@@ -149,9 +149,14 @@
 body {
   background:#2EB5E5;
 }
-
+/*
 .navbar-collapse.in {
-    background: #fff;
+    background: #fff !important;
+    z-index: 1000;
+}*/
+
+.navbar-collapse{
+    background: #fff !important;
     z-index: 1000;
 }
 
