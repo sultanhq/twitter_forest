@@ -7,9 +7,8 @@
 
   Controller.prototype = {
     updatePage: function() {
-      this.updateTreeModel.updateCounter();
-      var counter = this.updateTreeModel.counter;
-      this.updateTreeView.updateCounterHtml(counter);
+      window.requestCount();
+      this.updateTreeView.updateCounterHtml(window.msg);
       $("#moving_bar").css("height",(`${parseInt(document.getElementById("counter").innerHTML)}%`))
     }
   };
