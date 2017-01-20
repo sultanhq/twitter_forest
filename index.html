@@ -86,9 +86,11 @@
   </center>
   <script>
   var ws = new WebSocket('ws://127.0.0.1:1234', 'echo-protocol');
+  var hashTag = ""
 
   function sendHashTag(){
-    ws.send("#Trump");
+    // console.log(document.getElementById("forest-type").innerHTML)
+    ws.send(hashTag);
   }
 
   function requestCount(){

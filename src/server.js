@@ -1,7 +1,6 @@
 var Twitter = require('twitter');
 var http = require('http');
-var filter = '#nil';
-
+// var filter = '#nil';
 
 
 
@@ -31,10 +30,12 @@ wsServer.on('request', function(r) {
 
   console.log((new Date()) + ' Connection accepted [' + id + ']');
 
+  var stream = null;
 
   function setStream (filter) {
     console.log(filter);
-    var stream = client.stream('statuses/filter', {
+
+    stream = client.stream('statuses/filter', {
       track: filter
     });
   }
@@ -43,20 +44,18 @@ wsServer.on('request', function(r) {
     // tweetCounter = Math.floor((Math.random() * 100) + 1);
     // console.log(message)
 
-
     if (message.utf8Data.includes("#")) {
       setStream(message.utf8Data);
     }
-    else {
+    else if (message.utf8Data.includes("request")) {
       for (var i in clients) {
-        console.log(filter);
         clients[i].sendUTF(tweetCounter);
       }
 
       stream.on('data', function(tweet) {
         tweetCounter = tweetCounter + 1;
-        // console.log(tweetCounter);
-        // console.log(tweet.text);
+        console.log(tweetCounter);
+        console.log(tweet.text);
       });
 
       stream.on('error', function(error) {

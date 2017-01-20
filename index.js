@@ -11,10 +11,24 @@ window.onload = function() {
 
   $("#generate-forest").click(function(){
     var selection = $('#forest-selection').find(":selected").text();
+    window.hashTag = selection;
     console.log(selection);
     $("#forest-type").text(`of ${selection}`);
     hashTag = `#${selection}`;
     console.log(hashTag);
+
+    if (hashTag === 'nil'){
+      console.log("no tag set")
+    }
+    else {
+      console.log("tag set")
+      sendHashTag();
+      running = true;
+    }
+
+    if (running === true){
+      setInterval(function(){controller.updatePage();}, 3000);
+    }
   });
 
   bgAudio = new Audio('./public/media/bgAudio.mp3');
@@ -26,16 +40,3 @@ window.onload = function() {
   bgAudio.play();
 
 };
-
-if (hashTag === 'nil'){
-  console.log("no tag set")
-}
-else {
-  console.log("tag set")
-  sendHashTag();
-  running = true;
-}
-
-if (running === true){
-  setInterval(function(){controller.updatePage();}, 3000);
-}
