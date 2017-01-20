@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sultanhq/twitter_forest#readme",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "http-server": "^0.9.0",
     "twitter": "^1.7.0",
     "websocket": "^1.0.24"

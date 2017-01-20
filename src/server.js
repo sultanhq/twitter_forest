@@ -1,12 +1,13 @@
-var Twitter = require('twitter');
+var dotenv = require('dotenv');
+dotenv.load();
 var http = require('http');
-// var filter = '#nil';
+var Twitter = require('twitter');
 
 var client = new Twitter({
-  consumer_key: '1',
-  consumer_secret: '1',
-  access_token_key: '1',
-  access_token_secret: '1'
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_TOKEN,
+  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 
 var tweetCounter = 0;
@@ -24,6 +25,7 @@ wsServer = new WebSocketServer({
 
 var count = 0;
 var clients = {};
+var stream = null;
 
 wsServer.on('request', function(r) {
   var connection = r.accept('echo-protocol', r.origin);
@@ -35,28 +37,27 @@ wsServer.on('request', function(r) {
 
   console.log((new Date()) + ' Connection accepted [' + id + ']');
 
-  var stream = null;
 
-  function setStream (filter) {
+  function setStream(filter) {
     console.log(filter);
-
+    if (stream !== null) {
+      stream.destroy();
+    } else {
+      stream = null;
+    };
+    tweetCounter = 0
     stream = client.stream('statuses/filter', {
       track: filter
     });
   }
 
   connection.on('message', function(message) {
-    // tweetCounter = Math.floor((Math.random() * 100) + 1);
-    // console.log(message)
 
     if (message.utf8Data.includes("#")) {
       setStream(message.utf8Data);
-    }
-    else if (message.utf8Data.includes("!reset"))
-    {
+    } else if (message.utf8Data.includes("!reset")) {
       tweetCounter = 0;
-    }
-    else if (message.utf8Data.includes("request")) {
+    } else if (message.utf8Data.includes("request")) {
       for (var i in clients) {
         clients[i].sendUTF(tweetCounter);
       }
@@ -74,6 +75,7 @@ wsServer.on('request', function(r) {
   });
 
   connection.on('close', function(reasonCode, description) {
+    stream = null;
     delete clients[id];
     console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected.');
   });
