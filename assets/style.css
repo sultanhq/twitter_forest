@@ -1,229 +1,299 @@
 #tree {
-  bottom: 0px;
-  height:90vh;
-  width:100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  transition: 2s;
-  position: absolute;
+ bottom: 150px;
+ height:50vh;
+ width:100%;
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: center bottom;
+ transition: 2s;
+ position: absolute;
 }
 
 .tree-1 {
-  background-image: url("./images/t1.png");
+ background-image: url("./images/t1.png");
 }
 
 .tree-2 {
-  background-image: url("./images/t2.png");
+ background-image: url("./images/t2.png");
 }
 
 .tree-3 {
-  background-image: url("./images/t3.png");
+ background-image: url("./images/t3.png");
 }
 
 .tree-4 {
-  background-image: url("./images/t4.png");
+ background-image: url("./images/t4.png");
 }
 
 .tree-5 {
-  background-image: url("./images/t5.png");
+ background-image: url("./images/t5.png");
 }
 
 .tree-6 {
-  background-image: url("./images/t7.png");
+ background-image: url("./images/t7.png");
 }
 
 .tree-7 {
-  background-image: url("./images/t7.png");
+ background-image: url("./images/t7.png");
 }
 
 #tree-2 {
-  bottom: 0px;
-  height:60vh;
-  width:100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: 2s;
-  position: absolute;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
+ bottom: 0px;
+ height:60vh;
+ width:100%;
+ background-size: contain;
+ background-repeat: no-repeat;
+ transition: 2s;
+ position: absolute;
+ -moz-transform: scaleX(-1);
+ -o-transform: scaleX(-1);
+ -webkit-transform: scaleX(-1);
+ transform: scaleX(-1);
+ filter: FlipH;
+ -ms-filter: "FlipH";
 }
 
 #tree-3 {
-  bottom: 0px;
-  height:50vh;
-  width:100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: 1s;
-  position: absolute;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
+ bottom: 100px;
+ height:50vh;
+ width:100%;
+ background-size: contain;
+ background-repeat: no-repeat;
+ transition: 1s;
+ position: absolute;
+ -moz-transform: scaleX(-1);
+ -o-transform: scaleX(-1);
+ -webkit-transform: scaleX(-1);
+ transform: scaleX(-1);
+ filter: FlipH;
+ -ms-filter: "FlipH";
 }
 
 #tree-4 {
-  bottom: 0px;
-  height:70vh;
-  width:100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: 1.5s;
-  position: absolute;
+ bottom: 0px;
+ height:70vh;
+ width:100%;
+ background-size: contain;
+ background-repeat: no-repeat;
+ transition: 1.5s;
+ position: absolute;
 }
 #tree-5 {
-  bottom: 0px;
-  height:50vh;
-  width:100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: 1s;
-  /*position: absolute;*/
+ bottom: 200px;
+ height:50vh;
+ width:100%;
+ background-size: contain;
+ background-repeat: no-repeat;
+ transition: 1s;
+ position: absolute;
+}
+
+#tree-6 {
+ bottom: 100px;
+ left: 250px;
+ height:80vh;
+ width:100%;
+ background-size: contain;
+ background-repeat: no-repeat;
+ transition: 1s;
+ position: absolute;
+}
+
+#tree-7 {
+ bottom: 100px;
+ left: 1000px;
+ height:70vh;
+ width:100%;
+ background-size: contain;
+ background-repeat: no-repeat;
+ transition: 2s;
+ position: absolute;
+}
+
+#tree-8 {
+ bottom: 200px;
+ left: 800px;
+ height:10vh;
+ width:100%;
+ background-size: contain;
+ background-repeat: no-repeat;
+ transition: 1s;
+ position: absolute;
+}
+
+#tree-9 {
+ bottom: 200px;
+ left: 1400px;
+ height:12vh;
+ width:100%;
+ background-size: contain;
+ background-repeat: no-repeat;
+ transition: 1s;
+ position: absolute;
+}
+
+#tree-10 {
+ bottom: 100px;
+ left: -300px;
+ height:80vh;
+ width:100%;
+ background-size: contain;
+ background-repeat: no-repeat;
+ transition: 1s;
+ position: absolute;
+}
+
+#tree-11 {
+ bottom: 80px;
+ left: 1500px;
+ height:90vh;
+ width:100%;
+ background-size: contain;
+ background-repeat: no-repeat;
+ transition: 1s;
+ position: absolute;
 }
 
 .center {
-  margin-top: 50px;
-  text-align: center;
+ margin-top: 50px;
+ text-align: center;
 }
 
 .navbar-default {
-  background-color: #fff;
-  height: 54px;
+ background-color: #fff;
+ height: 54px;
 }
 
 .navbar-nav li a {
-  color: #125688;
-  border-bottom: thin dashed #80ccff;
-  white-space: nowrap;
-  overflow: hidden;
+ color: #125688 ;
+ border-bottom: thin dashed #80ccff ;
+ white-space: nowrap;
+ overflow: hidden;
 }
 
 .navbar-container {
-  width: 70%;
-  margin: 0 auto;
+ width: 70%;
+ margin: 0 auto;
 }
 
 body {
-  background: #2EB5E5 !important;
+ background-image: url("./images/background.jpg") !important;
+ background-size: cover;
+ background-repeat: no-repeat;
+ width: 100%;
+ height: 100%;
 }
 
 .sun {
-  float: left;
-  margin-top: -30px;
-  margin-left: 10px;
-  top:55px;
-  left:0;
-  right:0;
-  bottom:0;
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  background:white;
-  opacity:0.9;
-  box-shadow: 0px 0px 40px 15px white;
+ float: left;
+ margin-top: -30px;
+ margin-left: 10px;
+ top:55px;
+ left:0;
+ right:0;
+ bottom:0;
+ width:70px;
+ height:70px;
+ border-radius:50%;
+ background:white;
+ opacity:0.9;
+ box-shadow: 0px 0px 40px 15px white;
 }
 
 .ray_box {
-  float: left;
-  margin-top: 5px;
-  margin-left: 5px;
-  top:0px;
-  left:0;
-  right:0;
-  bottom:0;
-  width:70px;
-  -webkit-animation: ray_anim 120s linear infinite;
-  animation: ray_anim 120s linear infinite;
+ float: left;
+ margin-top: 5px;
+ margin-left: 5px;
+ top:0px;
+ left:0;
+ right:0;
+ bottom:0;
+ width:70px;
+ -webkit-animation: ray_anim 120s linear infinite;
+ animation: ray_anim 120s linear infinite;
 }
 .ray {
-  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
-  background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
-  margin-left:10px;
-  border-radius:80% 80% 0 0;
-  position:absolute;
-  opacity:0.1;
+ background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+ background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+ margin-left:10px;
+ border-radius:80% 80% 0 0;
+ position:absolute;
+ opacity:0.1;
 }
 
 .ray1 {
-  height:170px;
-  width:30px;
-  -webkit-transform: rotate(180deg);
-  top:-175px;
-  left: 15px;
+ height:170px;
+ width:30px;
+ -webkit-transform: rotate(180deg);
+ top:-175px;
+ left: 15px;
 }
 .ray2 {
-  height:100px;
-  width:8px;
-  -webkit-transform: rotate(220deg);
-  top:-90px;
-  left: 75px;
+ height:100px;
+ width:8px;
+ -webkit-transform: rotate(220deg);
+ top:-90px;
+ left: 75px;
 }
 .ray3 {
-  height:170px;
-  width:50px;
-  -webkit-transform: rotate(250deg);
-  top:-80px;
-  left: 100px;
+ height:170px;
+ width:50px;
+ -webkit-transform: rotate(250deg);
+ top:-80px;
+ left: 100px;
 }
 .ray4 {
-  height:120px;
-  width:14px;
-  -webkit-transform: rotate(305deg);
-  top:30px;
-  left: 100px;
+ height:120px;
+ width:14px;
+ -webkit-transform: rotate(305deg);
+ top:30px;
+ left: 100px;
 }
 .ray5 {
-  height:140px;
-  width:30px;
-  -webkit-transform: rotate(-15deg);
-  top:60px;
-  left: 40px;
+ height:140px;
+ width:30px;
+ -webkit-transform: rotate(-15deg);
+ top:60px;
+ left: 40px;
 }
 .ray6 {
-  height:90px;
-  width:50px;
-  -webkit-transform: rotate(30deg);
-  top:60px;
-  left: -40px;
+ height:90px;
+ width:50px;
+ -webkit-transform: rotate(30deg);
+ top:60px;
+ left: -40px;
 }
 .ray7 {
-  height:180px;
-  width:10px;
-  -webkit-transform: rotate(70deg);
-  top:-35px;
-  left: -40px;
+ height:180px;
+ width:10px;
+ -webkit-transform: rotate(70deg);
+ top:-35px;
+ left: -40px;
 }
 .ray8 {
-  height:120px;
-  width:30px;
-  -webkit-transform: rotate(100deg);
-  top:-45px;
-  left:-90px;
+ height:120px;
+ width:30px;
+ -webkit-transform: rotate(100deg);
+ top:-45px;
+ left:-90px;
 }
 .ray9 {
-  height:80px;
-  width:10px;
-  -webkit-transform: rotate(120deg);
-  top:-65px;
-  left:-60px;
+ height:80px;
+ width:10px;
+ -webkit-transform: rotate(120deg);
+ top:-65px;
+ left:-60px;
 }
 .ray10 {
-  height:190px;
-  width:23px;
-  -webkit-transform: rotate(150deg);
-  top:-185px;
-  left: -60px;
+ height:190px;
+ width:23px;
+ -webkit-transform: rotate(150deg);
+ top:-185px;
+ left: -60px;
 }
 
 
 @-webkit-keyframes ray_anim {
-  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
-  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+ 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
+ 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
 }
