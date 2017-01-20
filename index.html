@@ -3,9 +3,9 @@
 <head>
   <title>Twitter Forest</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" media="all" href="./assets/style.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <link rel="stylesheet" media="all" href="./assets/style.css"/>
   <script src='./src/updateTreeModel.js'></script>
   <script src='./src/updateTreeView.js'></script>
   <script src='./src/controller.js'></script>
@@ -34,7 +34,7 @@
                     <button class='close' data-dismiss='modal' type='button'>&#215</button>
                     <h4 class='modal-title'>Forest Choices</h4>
                   </div>
-                  <div class='modal-body'>̱
+                  <div class='modal-body'>
                     <div id='choice'>
                       <label class='choice'>Select from list</label>
                       <select class='category_choice' id="forest-selection">
@@ -86,17 +86,24 @@
     </div>
     <div id="tree" class="tree-1">
     </div>
-    <script>
-    var ws = new WebSocket('ws://127.0.0.1:1234', 'echo-protocol');
 
-    function requestCount(){
-      ws.send("message");
-    }
+  </div>
+  <div class="center">
+    <h1 id='counter'></h1>
+    <div id="tree" class="tree-1"></div>
+  </div>
+  <script>
+  var ws = new WebSocket('ws://127.0.0.1:1234', 'echo-protocol');
 
-    ws.addEventListener("message", function(e) {
-      console.log(e.data);
-      msg = e.data;
-    });
-    </script>
-  </body>
-  </html>
+  function requestCount(){
+    ws.send("message");
+  }
+
+  ws.addEventListener("message", function(e) {
+    console.log(e.data);
+    msg = e.data;
+  });
+  </script>
+</body>
+</html>
+

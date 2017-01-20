@@ -4,7 +4,9 @@ window.onload = function() {
   var controller = new Controller(updateTreeModel, updateTreeView);
   var msg = 0
 
+
  // $("#moving_bar").css("height",(`${parseInt(document.getElementById("counter").innerHTML)}%`))
+
  setInterval(function(){
   controller.updatePage();
     var counter = document.getElementById("counter");
@@ -25,10 +27,12 @@ window.onload = function() {
     }
   }, 3000);
 
+
     $("#generate-forest").click(function(){
       var selection = $('#forest-selection').find(":selected").text();
         $("#forest-type").text(`of ${selection}`);
     });
+
 
 bgAudio = new Audio('./public/media/bgAudio.mp3');
 bgAudio.addEventListener('ended', function() {
