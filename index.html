@@ -15,15 +15,16 @@
   <nav class='navbar navbar-default'>
     <div class='navbar-container'>
       <div class='navbar-header'>
-        <button class='navbar-toggle collapsed' data-target='#bs-navbar-collapse-1' data-toggle='collapse' type='button'>
-          <span class='sr-only'>Toggle Navigation</span>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
         </button>
         <div class='navbar-brand'>Twitter Forest <span id="forest-type"></span></div>
       </div>
-      <div class='collapse navbar-collapse' id='bs-navbar-collapse-1'>
-        <ul class='nav navbar-nav navbar-right'>
+      <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
           <li>
             <a data-toggle="modal" href="#myModal">Customise Forest</a>
             <div class='modal fade' id='myModal' role='dialog'>
@@ -38,9 +39,9 @@
                       <label class='choice'>Select from list</label>
                       <select class='category_choice' id="forest-selection">
                         <option>Flora</option>
-                        <option>Forna</option>
-                        <option>Trump</option>
+                        <option>Fauna</option>
                         <option>Lettuce</option>
+                        <option>Trump</option>
                       </select>
                     </div>
                   </div>
@@ -51,33 +52,38 @@
               </div>
             </div>
           </li>
-          <li>
+          <li id= "Reset">
             <a href="#">Reset</a>
           </li>
           <li>
-            <a href="#">Snapshot</a>
-          </li>
-          <li>
-            <a href="#">Share</a>
+            <a href="mailto:?subject=Check out my twitter forest!&body= http://www.twitterforest.com/">Share</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
   <div class='whole-body'>
-  <div class='sun'>
-    <div class='ray_box'>
-      <div class='ray ray1'></div>
-      <div class='ray ray2'></div>
-      <div class='ray ray3'></div>
-      <div class='ray ray4'></div>
-      <div class='ray ray5'></div>
-      <div class='ray ray6'></div>
-      <div class='ray ray7'></div>
-      <div class='ray ray8'></div>
-      <div class='ray ray9'></div>
-      <div class='ray ray10'></div>
+    <div class='sun'>
+      <div class='ray_box'>
+        <div class='ray ray1'></div>
+        <div class='ray ray2'></div>
+        <div class='ray ray3'></div>
+        <div class='ray ray4'></div>
+        <div class='ray ray5'></div>
+        <div class='ray ray6'></div>
+        <div class='ray ray7'></div>
+        <div class='ray ray8'></div>
+        <div class='ray ray9'></div>
+        <div class='ray ray10'></div>
+      </div>
     </div>
+    <div class="center">
+      <h1 id='counter'></h1>
+    </div>
+    <div id="tree" class="tree-1">
+    </div>
+
   </div>
     <h1 id='counter'></h1>
     <div id='tree-2' class='tree-1'></div>
@@ -95,15 +101,27 @@
 </div>
   <script>
   var ws = new WebSocket('ws://127.0.0.1:1234', 'echo-protocol');
+  var hashTag = ""
+  function e() {}
+
+  function sendHashTag(){
+    ws.removeEventListener('message', e);
+    ws.send(hashTag);
+  }
 
   function requestCount(){
-    ws.send("message");
+    ws.send("request");
+  }
+
+  function sendReset(){
+    ws.send("!reset");
   }
 
   ws.addEventListener("message", function(e) {
     console.log(e.data);
     msg = e.data;
   });
+
   </script>
 </body>
 </html>
