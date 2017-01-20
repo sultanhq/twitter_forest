@@ -161,6 +161,10 @@
  text-align: center;
 }
 
+.navbar {
+  z-index: 100;
+}
+
 .navbar-default {
  background-color: #fff;
  height: 54px;
