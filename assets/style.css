@@ -1,104 +1,92 @@
-
-#moving_bar_container {
-  height: 80vh;
-  width: 34px;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  display: inline-block;
-}
-
-#moving_bar {
-  height: 5%;
-  background-color: #745347;
-  width: 15px;
-  text-align: center;
-  z-index: 100;
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  display: inline-block;
-  transition: height 2s;
-}
-
 #tree {
   bottom: 0px;
-  position: absolute;
   height:90vh;
   width:100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: 2s;
+  position: absolute;
 }
 
 .tree-1 {
-  position: absolute;
-  bottom: 0px;
-  height: 5vh;
   background-image: url("./images/t1.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  transition: 2s;
 }
 
 .tree-2 {
-  height: 10vh;
   background-image: url("./images/t2.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  transition: 2s;
-  position: absolute;
 }
 
 .tree-3 {
-  height: 18vh;
   background-image: url("./images/t3.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  transition: 2s;
-  position: absolute;
 }
 
 .tree-4 {
-  height: 30vh;
   background-image: url("./images/t4.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  transition: 2s;
-  position: absolute;
 }
 
 .tree-5 {
-  height: 60vh;
   background-image: url("./images/t5.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  transition: 2s;
-  position: absolute;
 }
 
 .tree-6 {
-  height: 80vh;
   background-image: url("./images/t7.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  transition: 2s;
-  position: absolute;
 }
 
 .tree-7 {
-  height: 90vh;
   background-image: url("./images/t7.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  transition: 2s;
-  position: absolute;
 }
 
-/*img {
-  position:fixed;
-  bottom:0px;
-  left:50%;
-  transition: 3s;
-}*/
+#tree-2 {
+  bottom: 0px;
+  height:60vh;
+  width:100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 2s;
+  position: absolute;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+#tree-3 {
+  bottom: 0px;
+  height:50vh;
+  width:100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 1s;
+  position: absolute;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+#tree-4 {
+  bottom: 0px;
+  height:70vh;
+  width:100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 1.5s;
+  position: absolute;
+}
+#tree-5 {
+  bottom: 0px;
+  height:50vh;
+  width:100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 1s;
+  /*position: absolute;*/
+}
 
 .center {
   margin-top: 50px;
@@ -123,7 +111,7 @@
 }
 
 body {
-  background:#2EB5E5;
+  background: #2EB5E5 !important;
 }
 
 .sun {
@@ -238,10 +226,4 @@ body {
 @-webkit-keyframes ray_anim {
   0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
   100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
-}
-
-@media (max-height: 1600px) {
-  #tree {
-    background-size: contain;
-  }
 }
