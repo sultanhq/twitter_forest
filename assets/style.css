@@ -94,12 +94,6 @@
   position: absolute;
 }
 
-/*img {
-  position:fixed;
-  bottom:0px;
-  left:50%;
-  transition: 3s;
-}*/
 
 .center {
   margin-top: 50px;
@@ -127,8 +121,8 @@ body {
   background:#2EB5E5;
 }
 
-.navbar-collapse.in {
-    background: #fff;
+.navbar-collapse{
+    background: #F8f8f8 !important;
     z-index: 1000;
 }
 
