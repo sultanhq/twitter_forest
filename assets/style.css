@@ -102,7 +102,7 @@
 
 .navbar-default {
   background-color: #fff;
-  height: 54px;
+  heighxt: 54px;
 }
 
 .navbar-nav li a {
@@ -118,7 +118,7 @@
 }
 
 body {
-  background:#2EB5E5;
+  background:#2EB5E5 !important;
 }
 
 .navbar-collapse{
