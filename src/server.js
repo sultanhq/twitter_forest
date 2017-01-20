@@ -1,16 +1,10 @@
 var Twitter = require('twitter');
 var http = require('http');
+var filter = '#nil';
 
-var client = new Twitter({
-  consumer_key: '',
-  consumer_secret: '',
-  access_token_key: '',
-  access_token_secret: ''
-});
 
-// var stream = client.stream('statuses/filter', {
-//   track: '#trump'
-// });
+
+
 var tweetCounter = 0;
 
 var server = http.createServer(function(request, response) {});
@@ -30,34 +24,49 @@ var clients = {};
 wsServer.on('request', function(r) {
   var connection = r.accept('echo-protocol', r.origin);
   var id = count++;
+
   tweetCounter = 0;
 
   clients[id] = connection;
 
   console.log((new Date()) + ' Connection accepted [' + id + ']');
 
-  // stream.on('data', function(tweet) {
-  //   counter = counter + 1;
-  //   // console.log(count);
-  //   // console.log(tweet.text);
-  // });
-  //
-  // stream.on('error', function(error) {
-  //   throw error;
-  // });
+
+  function setStream (filter) {
+    console.log(filter);
+    var stream = client.stream('statuses/filter', {
+      track: filter
+    });
+  }
 
   connection.on('message', function(message) {
-    tweetCounter = Math.floor((Math.random() * 100) + 1);
+    // tweetCounter = Math.floor((Math.random() * 100) + 1);
+    // console.log(message)
 
-    for (var i in clients) {
-      clients[i].sendUTF(tweetCounter);
+
+    if (message.utf8Data.includes("#")) {
+      setStream(message.utf8Data);
     }
+    else {
+      for (var i in clients) {
+        console.log(filter);
+        clients[i].sendUTF(tweetCounter);
+      }
 
+      stream.on('data', function(tweet) {
+        tweetCounter = tweetCounter + 1;
+        // console.log(tweetCounter);
+        // console.log(tweet.text);
+      });
+
+      stream.on('error', function(error) {
+        throw error;
+      });
+    }
   });
 
   connection.on('close', function(reasonCode, description) {
     delete clients[id];
     console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected.');
   });
-
 });

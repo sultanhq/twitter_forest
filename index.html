@@ -87,8 +87,12 @@
   <script>
   var ws = new WebSocket('ws://127.0.0.1:1234', 'echo-protocol');
 
+  function sendHashTag(){
+    ws.send("#Trump");
+  }
+
   function requestCount(){
-    ws.send("message");
+    ws.send("request");
   }
 
   ws.addEventListener("message", function(e) {
