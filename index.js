@@ -2,9 +2,8 @@ window.onload = function() {
   var updateTreeModel = new UpdateTreeModel();
   var updateTreeView = new UpdateTreeView();
   var controller = new Controller(updateTreeModel, updateTreeView);
+  var msg = 0
 
-
- // $("#moving_bar").css("height",(`${parseInt(document.getElementById("counter").innerHTML)}%`))
  setInterval(function(){
   controller.updatePage();
     var counter = document.getElementById("counter");
@@ -23,22 +22,20 @@ window.onload = function() {
     } else {
       document.getElementById("tree").className = "tree-7";
     }
-
   }, 3000);
 
-// $(document).ready(function(){
+
     $("#generate-forest").click(function(){
       var selection = $('#forest-selection').find(":selected").text();
         $("#forest-type").text(`of ${selection}`);
     });
-// });
 
+  bgAudio = new Audio('./public/media/bgAudio.mp3');
+  bgAudio.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+  }, false);
+  bgAudio.volume = 0.25;
+  bgAudio.play();
 
-bgAudio = new Audio('./public/media/bgAudio.mp3');
-bgAudio.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-bgAudio.volume = 0.25;
-bgAudio.play();
 };

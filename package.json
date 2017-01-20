@@ -1,0 +1,24 @@
+{
+  "name": "twitter_forest",
+  "version": "0.0.1",
+  "description": "A virtual forest which grows based on the poularity of hashtags, so the forest starts with seeds and the grow in to saplings, then trees, also flower and fruit etc.",
+  "main": "./src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sultanhq/twitter_forest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sultanhq/twitter_forest/issues"
+  },
+  "homepage": "https://github.com/sultanhq/twitter_forest#readme",
+  "dependencies": {
+    "http-server": "^0.9.0",
+    "twitter": "^1.7.0",
+    "websocket": "^1.0.24"
+  }
+}
